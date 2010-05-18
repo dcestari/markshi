@@ -13,7 +13,7 @@ module Markshi
 
   def highlight_code(text)
     text.gsub(/<pre><code>(\[\w+\])?([^<]+)<\/code><\/pre>/m) do
-      CodeRay.scan($2, $1).div(:css => :class)
+      CodeRay.scan($2, $1).div(:css => :class).gsub('&amp;', '&')
     end
   end
 
