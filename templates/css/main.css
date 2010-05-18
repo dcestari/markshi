@@ -1,0 +1,30 @@
+html, body
+{
+  padding: 0;
+  margin: 0;
+  font-family: Verdana, Tahoma, Arial, sans-serif;
+}
+
+.container
+{
+  background-color: white;
+}
+
+.article
+{
+  width: 90%;
+  margin: 0 auto;
+}
+
+pre
+{
+  background-color: black;
+  color: white;
+  padding: 1em;
+}
+
+.footer
+{
+  text-align: center;
+}
+

@@ -1,0 +1,30 @@
+#!/usr/bin/env ruby
+
+require 'markshi'
+require 'digest/sha1'
+require 'tmpdir'
+
+include Markshi
+
+filename = ARGV[0];
+
+if (ARGV.size < 1)
+  abort "Usage: #{$0} <markdown file>"
+end
+
+title = File.basename(filename).gsub(/\.markdown/m, '')
+content = File.read(filename)
+
+(toc, html) = markdownize(content)
+output = layout(title, toc, decorate_boxes(highlight_code(html)))
+hash = Digest::SHA1::hexdigest(output)
+
+tmpfile = "#{Dir.tmpdir}/markshi-#{hash}.html"
+File.open(tmpfile, 'w+') do |f|
+  f.puts output
+end
+
+puts "created new html file #{tmpfile}"
+
+`open #{tmpfile} || gnome-open #{tmpfile}`
+
