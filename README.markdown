@@ -22,7 +22,7 @@ Installation
 ------------
 
 Fetch *markshi* from *github*:
-    ~$ git clone http://github.com/dcestari/markshi
+    ~$ git clone git://github.com/dcestari/markshi.git
 
 Compile the gem:
     ~markshi$ gem build markshi.gemspec
