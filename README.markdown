@@ -18,8 +18,17 @@ Requeriments
 - RDiscount
 - Linux or Mac OS X (or a custom **open** script to open html files)
 
+### Debian-based Linux Distributions
+- rubygems1.8 (1.9 not tested)
+- ruby-dev
+
 Installation
 ------------
+
+### Debian-based Linux Distributions
+    ~$ sudo aptitude install rubygems1.8 ruby-dev
+
+### General
 
 Fetch *markshi* from *github*:
     ~$ git clone git://github.com/dcestari/markshi.git
@@ -27,8 +36,14 @@ Fetch *markshi* from *github*:
 Compile the gem:
     ~markshi$ gem build markshi.gemspec
 
-Install the gem:
+Install the gem (you might want to use *sudo* here):
     ~markshi$ gem install markshi-*.gem
+
+### Final Steps
+
+Now *check your path* to see if the gems bin directory is included,
+otherwise include it on your *bashrc*.
+    ~$ echo 'export PATH=$HOME/.gem/ruby/1.8/bin:$PATH' >> .bashrc
 
 Usage
 -----
