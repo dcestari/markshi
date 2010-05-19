@@ -12,16 +12,16 @@ module Markshi
   end
 
   def highlight_code(text)
-    text.gsub(/<pre><code>(\[\w+\])?([^<]+)<\/code><\/pre>/m) do
-      CodeRay.scan($2, $1).div(:css => :class).gsub('&amp;', '&')
+    text.gsub(/<pre><code>(\[(\w+)\])?\n([^<]+)<\/code><\/pre>/m) do
+      CodeRay.scan($3, $2).div(:css => :class).gsub('&amp;', '&')
     end
   end
 
   def decorate_boxes(text)
     boxes = %w[note quote caution]
     boxes = boxes.join '|'
-    text.gsub(/<blockquote><strong>(#{boxes})<\/strong>/mi) do
-      "<blockquote class=#{$1}>"
+    text.gsub(/<blockquote><p><strong>(#{boxes})<\/strong>/mi) do
+      "<blockquote class=\"#{$1}\"><p>".downcase
     end
   end
 
