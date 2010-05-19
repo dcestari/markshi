@@ -42,8 +42,9 @@ Install the gem (you might want to use *sudo* here):
 ### Final Steps
 
 Now *check your path* to see if the gems bin directory is included,
-otherwise include it on your *bashrc*.
-    ~$ echo 'export PATH=$HOME/.gem/ruby/1.8/bin:$PATH' >> .bashrc
+otherwise include it on your *bashrc* (use *rubygems*' global path if you
+used *sudo* above, */var/lib/gem/1.8/bin* on a *Debian* system).
+    ~$ echo 'export PATH=$HOME/.gem/ruby/1.8/bin:$PATH' >> ~/.bashrc
 
 Usage
 -----
