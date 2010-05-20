@@ -16,15 +16,47 @@ html, body
   margin: 0 auto;
 }
 
-pre
-{
-  background-color: black;
-  color: white;
-  padding: 1em;
-}
-
 .footer
 {
   text-align: center;
+}
+
+blockquote.note,
+blockquote.caution,
+blockquote.tip
+{
+  font-weight: normal;
+  min-height: 3.6em;
+  padding: 0.6em 2em 0.6em 3.6em;
+  margin: 1em 0;
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+  background-color: #ffd;
+  background-repeat: no-repeat;
+  background-position: 1em 1.2em;
+}
+
+blockquote.note
+{
+  background-image: url('../images/note.png');
+}
+
+blockquote.caution
+{
+  background-image: url('../images/caution.png');
+}
+
+blockquote.tip
+{
+  background-image: url('../images/tip.png');
+}
+
+blockquote.quote
+{
+  margin: 2em 4em;
+  min-height: 4em;
+  color: #575757;
+  padding: 0 3.5em;
+  background: transparent url('../images/blockquote.gif') no-repeat 0 0;
 }
 
