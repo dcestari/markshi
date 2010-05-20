@@ -1,0 +1,26 @@
+pre
+{
+  background-color: black;
+  color: white;
+  padding: 1em;
+}
+
+.CodeRay .c
+{
+  color: #BD48B3;
+  font-style: italic;
+}
+
+.CodeRay .r
+{
+  color: #FFCC66;
+  font-weight: normal;
+}
+
+.CodeRay .fu,
+.CodeRay .cl
+{
+  color: white;
+  font-weight: normal;
+}
+
