@@ -18,7 +18,7 @@ module Markshi
   end
 
   def decorate_boxes(text)
-    boxes = %w[note quote caution]
+    boxes = %w[note quote caution tip]
     boxes = boxes.join '|'
     text.gsub(/<blockquote><p><strong>(#{boxes})<\/strong>/mi) do
       "<blockquote class=\"#{$1}\"><p>".downcase
